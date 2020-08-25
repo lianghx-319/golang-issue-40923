@@ -1,0 +1,16 @@
+{
+  "name": "go-wasm-debug",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "yarn build:wasm && vite",
+    "build": "vite build",
+    "build:wasm": "cd src && GOOS=js GOARCH=wasm go build -o assets/main.wasm main.go"
+  },
+  "dependencies": {
+    "vue": "^3.0.0-rc.1"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.0-rc.1",
+    "vite": "^1.0.0-rc.1"
+  }
+}
